@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Project</title>
+    <style>
+        .center {
+            display: block;
+            /* width: 50%; */
+            margin-left: auto;
+            margin-right: auto;
+            /* transform: translateY(20%); */
+        }
+
+        .btn {
+            background-color: green;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            color: rgb(255, 255, 255);
+            margin-top: 10px;
+        }
+        #h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1">Bulb is Off</h1>
+    <img src="111.jpg" alt="" class="center" id="bulb">
+    <button id="toggleBtn" class="center btn">Turn On</button>
+
+
+    <script>
+        let btn = document.getElementById('toggleBtn');
+        let bulb = document.getElementById('bulb');
+        let h1 = document.getElementById('h1');
+
+        btn.addEventListener('click', toggleBulb)
+
+        function toggleBulb() {
+            if (btn.textContent.includes('On')) {
+                bulb.src = "11.jpg"
+                btn.textContent = "Turn Off"
+                h1.innerHTML = "! Nice Bulb is On"
+            } else {
+                bulb.src = "111.jpg"
+                btn.textContent = "Turn On"
+                h1.innerHTML = "! Oh Bulb is Off"
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>
